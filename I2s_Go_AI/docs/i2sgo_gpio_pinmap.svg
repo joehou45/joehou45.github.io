@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="406" viewBox="0 0 680 406" font-family="STHeiti, 'Heiti TC', 'PingFang TC', 'Hiragino Sans GB', sans-serif">
+<style>
+.t{font-size:14px;fill:#2C2C2A}.ts{font-size:12px;fill:#5F5E5A}.th{font-size:14px;font-weight:500}.title{font-size:16px;font-weight:500;fill:#2C2C2A}
+</style>
+<rect x="0" y="0" width="680" height="406" fill="#ffffff"/>
+<text class="title" x="340" y="24" text-anchor="middle">I2S-GO v1.1 · 完整 GPIO 線路圖</text>
+
+<rect x="78" y="36" width="12" height="12" rx="3" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text class="ts" x="96" y="46">I2S</text>
+<rect x="168" y="36" width="12" height="12" rx="3" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="ts" x="186" y="46">SPI</text>
+<rect x="258" y="36" width="12" height="12" rx="3" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text class="ts" x="276" y="46">GPIO / I2C</text>
+<rect x="430" y="36" width="12" height="12" rx="3" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="ts" x="448" y="46">ESP32 核心</text>
+
+<rect x="270" y="80" width="140" height="300" rx="12" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text class="th" x="340" y="219" text-anchor="middle" fill="#085041">ESP32</text>
+<text class="ts" x="340" y="238" text-anchor="middle" fill="#0F6E56">LOLIN32 Lite</text>
+<text class="ts" x="340" y="256" text-anchor="middle" fill="#0F6E56">雙核 · WiFi · BT</text>
+
+<rect x="20" y="80" width="215" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text class="th" x="127" y="106" text-anchor="middle" fill="#3C3489">INMP441 麥克風</text>
+<text class="ts" x="127" y="124" text-anchor="middle" fill="#534AB7">WS33 · SCK25 · SD26</text>
+<text class="ts" x="252" y="104" text-anchor="middle">I2S0</text>
+<line x1="235" y1="108" x2="269" y2="108" stroke="#888780" stroke-width="1"/>
+
+<rect x="20" y="150" width="215" height="56" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text class="th" x="127" y="176" text-anchor="middle" fill="#3C3489">MAX98357A 喇叭</text>
+<text class="ts" x="127" y="194" text-anchor="middle" fill="#534AB7">LRC12 · BCLK13 · DIN15</text>
+<text class="ts" x="252" y="174" text-anchor="middle">I2S1</text>
+<line x1="235" y1="178" x2="269" y2="178" stroke="#888780" stroke-width="1"/>
+
+<rect x="20" y="220" width="215" height="72" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="th" x="127" y="242" text-anchor="middle" fill="#0C447C">ST7789 TFT 240×240</text>
+<text class="ts" x="127" y="262" text-anchor="middle" fill="#185FA5">SCL18 SDA19 RES23</text>
+<text class="ts" x="127" y="280" text-anchor="middle" fill="#185FA5">DC16 · BLK4</text>
+<text class="ts" x="252" y="252" text-anchor="middle">SPI</text>
+<line x1="235" y1="256" x2="269" y2="256" stroke="#888780" stroke-width="1"/>
+
+<rect x="20" y="306" width="215" height="72" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text class="th" x="127" y="328" text-anchor="middle" fill="#0C447C">microSD 記憶卡</text>
+<text class="ts" x="127" y="348" text-anchor="middle" fill="#185FA5">MISO2 CLK17 MOSI22</text>
+<text class="ts" x="127" y="366" text-anchor="middle" fill="#185FA5">CS5</text>
+<text class="ts" x="252" y="334" text-anchor="middle">SPI</text>
+<line x1="235" y1="342" x2="269" y2="342" stroke="#888780" stroke-width="1"/>
+
+<rect x="440" y="80" width="200" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text class="th" x="540" y="106" text-anchor="middle" fill="#712B13">RGBW LED</text>
+<text class="ts" x="540" y="124" text-anchor="middle" fill="#993C1D">S.IN · GPIO32</text>
+<text class="ts" x="425" y="104" text-anchor="middle">RMT</text>
+<line x1="411" y1="108" x2="439" y2="108" stroke="#888780" stroke-width="1"/>
+
+<rect x="440" y="150" width="200" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text class="th" x="540" y="176" text-anchor="middle" fill="#712B13">按鈕 L / R</text>
+<text class="ts" x="540" y="194" text-anchor="middle" fill="#993C1D">左 IO0 · 右 IO35</text>
+<text class="ts" x="425" y="174" text-anchor="middle">GPIO</text>
+<line x1="411" y1="178" x2="439" y2="178" stroke="#888780" stroke-width="1"/>
+
+<rect x="440" y="220" width="200" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text class="th" x="540" y="246" text-anchor="middle" fill="#712B13">I2C 擴充</text>
+<text class="ts" x="540" y="264" text-anchor="middle" fill="#993C1D">SDA14 · SCL27</text>
+<text class="ts" x="425" y="242" text-anchor="middle">I2C</text>
+<line x1="411" y1="248" x2="439" y2="248" stroke="#888780" stroke-width="1"/>
+
+<text class="ts" x="340" y="398" text-anchor="middle" fill="#888780">依官方 PDF Pin Map (第6頁) 繪製 · 電源 3V3 / 5V / GND 另於排針</text>
+</svg>
