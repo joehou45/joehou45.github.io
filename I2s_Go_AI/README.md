@@ -13,7 +13,6 @@
 | `esp32_marquee_arduino/` | `marquee.ino` — TFT 顯示 "Claude control" 跑馬燈 | Arduino | ✅ 成功 |
 | `esp32_webradio_arduino/` | `webradio.ino` — 網路電台機（SomaFM 串流） | Arduino | ✅ 成功 |
 | `esp32_voice_assistant/` | 語音對話助理（Mac 當大腦，見子資料夾 README） | Arduino + Python | ✅ 成功 |
-| `rpi0_led_micropython/` | `led_control.py` — Raspberry Pi Zero 板載 LED 控制 | Python | ✅ 成功（此為 rpi0，非 ESP32） |
 
 ---
 
@@ -72,12 +71,6 @@ arduino-cli compile --upload -p /dev/cu.usbserial-2120 \
 
 > **webradio.ino 內含 WiFi 帳密（明碼）**。要改網路或電台，直接編輯檔案開頭的
 > `WIFI_SSID` / `WIFI_PASS` 與 `stations[]`。目前還留有除錯用的 serial 心跳訊息（無害）。
-
-### Raspberry Pi（led_control）
-這支是給 **rpi0（Raspberry Pi Zero W, 192.168.68.142）** 用的，控制板載 ACT LED：
-```bash
-sudo python3 led_control.py on | off | blink [-n 次數] [-i 間隔] | restore
-```
 
 ---
 
